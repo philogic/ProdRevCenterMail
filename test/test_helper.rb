@@ -15,3 +15,9 @@ class ActiveSupport::TestCase
   fixtures :all
   # Add more helper methods to be used by all tests here...
 end
+
+Minitest::Reporters.use!(
+    Minitest::Reporters::SpecReporter.new,
+    ENV,
+    Minitest.backtrace_filter
+)

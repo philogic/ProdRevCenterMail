@@ -1,7 +1,7 @@
 require 'test_helper'
 
 class MessagesControllerTest < ActionDispatch::IntegrationTest
-  let(:message) { messages :one }
+  let(:one) { messages :one }
 
   it 'gets index' do
     get messages_url
