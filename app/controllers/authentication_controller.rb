@@ -1,5 +1,5 @@
 class AuthenticationController < ApplicationController
-
+  skip_before_action :authenticate_request
   def authenticate
     command = ClientAuthentication.call(params[:name], params[:password])
     if command.success?
