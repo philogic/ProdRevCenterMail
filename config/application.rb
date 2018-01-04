@@ -28,7 +28,7 @@ module ProdRevCenterMail
     config.api_only = true
     config.autoload_paths << Rails.root.join('lib')
     config.generators do |g|
-      g.test_framework :minitest, spec: true, fixture: true
+      g.test_framework :minitest, spec: true, fixture: true, erb: true
     end
   end
 end

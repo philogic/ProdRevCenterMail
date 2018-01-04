@@ -1,9 +1,9 @@
 require "test_helper"
 
 describe Client do
-  let(:client) { Client.new }
+  let(:product_review_center) { clients(:product_review_center) }
 
   it "must be valid" do
-    value(client).must_be :valid?
+    value(product_review_center).must_be :valid?
   end
 end

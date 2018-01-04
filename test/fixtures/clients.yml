@@ -1,4 +1,4 @@
-product-review-center:
+product_review_center:
   name: product-review-center
   domain: www.prodrevcenter.com
-  password: 5469secure
+  password_digest: <%= BCrypt::Password.create("5469secure") %>
