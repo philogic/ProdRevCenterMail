@@ -7,7 +7,7 @@ class MessagesControllerTest < ActionDispatch::IntegrationTest
     @client = clients(:product_review_center)
     @token = JWT.encode({user: @client.id}, Rails.application.secrets.secret_key_base)
   end
-  
+
   it 'gets index' do
     Client.stub(:find, @client) do
       get messages_url, as: :json
